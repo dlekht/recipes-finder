@@ -1,8 +1,14 @@
 # **Recipe Finder**
 This is a simple web application that helps you discover recipes based on the ingredients you already have. The app integrates with the Spoonacular Recipe API and features a user-friendly interface optimized for desktop and mobile devices. This repository contains the frontend implementation of the project. The backend is a Node.js/Express server deployed on Render. It acts as a secure proxy for Spoonacular's API, protecting the API key. The backend is hosted privately to ensure data security.
 
+
 ## **Important Note**
 Since the backend is hosted on Render, the server may go to sleep during periods of inactivity. As a result, the first request after a period of inactivity might take up to 50 seconds to respond. Subsequent requests will work without delays.
+
+
+## **Demo**
+https://dlekht.github.io/recipes-finder/
+
 
 ## **Features**
 - You can enter ingredients, and Recipe Finder will suggest recipes that include them.
