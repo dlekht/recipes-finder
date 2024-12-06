@@ -1,0 +1,211 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    min-height: 100vh;
+    height: auto;
+
+    background-color: hsl(31, 90%, 69%);
+    color: hsl(352, 100%, 15%);
+
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+}
+
+button, input {
+    border-radius: 0.5rem;
+    box-shadow: 0px 4px 6px hsla(0, 0%, 0%, 0.2);
+}
+
+button{
+    padding: 0.5rem 1rem;
+
+    border: none;
+    background-color: hsl(0, 100%, 27%);
+    color: hsl(39, 87%, 94%);
+
+    font-size: 1.3em;
+
+    cursor: pointer;
+}
+
+
+button:hover{
+    background-color: hsl(0, 100%, 32%);
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(1);
+}
+
+#pageTitle{
+    margin-top: 6rem;
+}
+
+#recipeFinder{
+    display: flex;
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+#recipeInput{
+    padding: 0.5rem 1rem;
+
+    border: 2px solid hsl(0, 23%, 24%);
+    background-color: hsl(48, 100%, 93%);
+    color: hsl(0, 23%, 24%);
+
+    font-size: 1.2em;
+}
+#recipeInput:focus {
+    outline: none;
+    border-color: hsl(0, 23%, 24%);
+  }
+
+#listOfRecipesDisplay{
+    margin: 1rem 0;
+    max-width: 80vw;
+    padding: 3rem;
+
+    border-radius: 0.5rem;
+    background-color: hsla(40, 100%, 94%, 0.9);
+    box-shadow: 0px 4px 6px hsla(0, 0%, 0%, 0.1);
+}
+
+#returnBtn{
+    align-self: flex-start;
+    font-size: 1.4em;
+}
+
+#recipeDisplay{
+    margin-bottom: 1.5rem;
+    max-width: 100%;
+    padding: 2rem;
+
+    border-radius: 6rem;
+    background-color: hsla(51, 98%, 64%, 0.8);
+    box-shadow: 0px 4px 6px hsla(0, 0%, 0%, 0.1);
+
+    color: hsl(0, 23%, 24%);
+}
+
+#recipeHeader{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+
+#ingredientsContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 45%;
+    padding: 1rem;
+
+    border-radius: 1.5rem;
+    background-color: hsla(40, 100%, 94%, 0.2);
+}
+
+.recipeImage{
+    max-width: 100%;
+    border-radius: 0.5rem;
+    box-shadow: 0px 4px 6px hsla(0, 23%, 24%);
+}
+
+#recipeImageContainer{
+    padding: 0.5rem;
+    max-width: 40%;
+    max-height: fit-content;
+
+    border-radius: 1.5rem;
+    background-color: hsla(40, 100%, 94%, 0.2);
+}
+
+
+#instructionsContainer{
+    max-width: 50%;
+    margin: 0;
+    padding: 1.25rem;
+
+    border-radius: 1.5rem;
+    background-color: hsla(40, 100%, 94%, 0.2);
+}
+
+
+.visible{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.notVisible{
+    display: none;
+}
+
+.backgroundImages{
+    background-image: url("images/bowlOfSoup.png");
+    background-size: 18.75rem;
+    background-repeat: repeat-x;
+    background-position: bottom;
+}
+
+.backgroundImage{
+    background-image: url("images/bowlOfSoup.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position-y: 0;
+}
+
+h3, h4{
+    color: hsl(352, 100%, 15%);
+    text-align: center;
+}
+
+p{
+    margin: 0;
+    font-size: 1.2em;
+}
+
+label{
+    margin: 0.6rem;
+    color:hsla(0, 0%, 0%, 0.5)
+}
+
+a{
+    color: hsl(0, 23%, 24%);
+}
+
+
+li{
+    margin: 0.35rem;
+    font-size: 1.2em;
+}
+
+
+@media (max-width: 768px) {
+    #recipeHeader{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #ingredientsContainer,
+    #recipeImageContainer,
+    #instructionsContainer{
+        max-width: 100%;
+    }
+
+    #pageTitle{
+        margin-top: 4rem;
+    }
+}
+
