@@ -75,7 +75,7 @@ async function fetchData(apiUrl){
 
 async function getRecipes(ingredients){
 
-    const apiUrl = `https://recipes-finder-backend.onrender.com/recipes?ingredients=${ingredients}`;
+    const apiUrl = `https://recipes-finder-backend-production.up.railway.app/recipes?ingredients=${ingredients}`;
 
     const fetchedData = fetchData(apiUrl);
 
@@ -116,7 +116,7 @@ async function showRecipeDescription(recipeId){
 
     recipeDisplay.innerHTML = "";
 
-    const apiUrl = `https://recipes-finder-backend.onrender.com/recipe/${recipeId}`;
+    const apiUrl = `https://recipes-finder-backend-production.up.railway.app/recipe/${recipeId}`;
     const data = await fetchData(apiUrl);
 
     const {title, extendedIngredients: ingredients, instructions, image, sourceUrl} = data;
